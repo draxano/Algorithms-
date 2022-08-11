@@ -3,6 +3,16 @@ package com.algodata.draxano;
 import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
+//Remember to analyse the time complexities
+/*
+* method avarageTemp()
+* method daysAboveAvarageTemp()
+* method missingNumber()
+* method twoSum()
+* method twoSum2()
+* method twoSumCourse()
+* */
+
 public class Arrays {
     // you need to really understand the difference here
     // Array declaration, initialization, instantiation:
@@ -111,12 +121,30 @@ public class Arrays {
         for (int i = 0; i < nums.length; i++) {
             for (int j = 0; j < nums.length; i++) {
                 if (nums[i] + nums[j] == target) {
-                    return new int[] {i, j};
+                    return new int[] {i, j}; // this is an anonymous object
                 }
             }
         }
 
-        throw new IllegalArgumentException("No solution found");
+        throw new IllegalArgumentException("No solution found"); // this is anonymous object as well
     }
 
-}
+
+   public void rotate90deg(int[][] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = arr.length - 1; j >= 0 ; j--){
+                System.out.print(arr[j][i] + " ");
+
+            }
+            System.out.println();
+
+
+        }
+
+   }
+
+
+
+   }
+
+
