@@ -1,5 +1,5 @@
 package com.algodata.draxano.LinkedList;
-
+// analyse and understand what's going on
 public class SinglyLinkedList {
 
     public Node head;
