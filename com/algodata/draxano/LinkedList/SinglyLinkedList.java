@@ -1,5 +1,6 @@
 package com.algodata.draxano.LinkedList;
 // analyse and understand what's going on
+// java already has this sorted (Node and Linked list, we are learning all this for algorithms' sake)
 public class SinglyLinkedList {
 
     public Node head;
@@ -19,14 +20,14 @@ public class SinglyLinkedList {
 
     // Insert method in Singly Linked List (Algorithm):
     // This is your insertion bible study this in depth.
-
+    // Time and space complexity T(N), S(1), where T = time and S = space
     public void insertInLinkedList(int nodeValue, int location){
-        Node node = new Node();
-        node.value = nodeValue;
-        if(head == null){
-            createSinglyLinkedList(nodeValue);
+        Node node = new Node();  // making sure that we have a linked list
+        node.value = nodeValue; // making sure that our nod's value is what we have given in to it
+        if(head == null){ // meaning if we don't have a linked list
+            createSinglyLinkedList(nodeValue); // we will create single linked list if we don't have one, with the given value
             return;
-        } else if (location == 0){
+        } else if (location == 0){ // if we inset it at the beginning
             node.next = head;
             head = node;
         } else if (location >= size){
@@ -45,6 +46,48 @@ public class SinglyLinkedList {
             node.next = nextNode;
         }
         size++;
+    }
+
+
+    /*
+    * First node isn't HEAD but one after that
+    * Tails do have a value, but HEAD doesn't
+    * Taill has next (reference) null since the train finsihes after the tail
+    *
+    * */
+
+    // Traversal of Singly Linked List
+    public void traverseSLL(){
+        if(head == null){
+            System.out.println("SLL doesn't exist");
+        }
+        else {
+            Node tempNode = head;
+            for (int i = 0; i < size; i++){
+                System.out.print(tempNode.value);
+                if (i != size - 1){
+                    System.out.print(" -> ");
+                }
+                tempNode = tempNode.next;
+            }
+        }
+        System.out.println("\n");
+    }
+
+    // Searching in Singly Linked Lists
+    boolean searchNode(int nodeValue){
+        if(head != null){
+            Node tempNode = head;
+            for (int i = 0; i < size; i++){
+                if (tempNode.value == nodeValue){
+                    System.out.println("found the node at location " + i + "\n");
+                    return true;
+                }
+                tempNode = tempNode.next;
+            }
+        }
+        System.out.println("Node not found! ");
+        return false;
     }
 
 
