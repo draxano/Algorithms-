@@ -12,9 +12,11 @@ public class main {
         sLL.insertInLinkedList(6, 1);
         sLL.insertInLinkedList(7, 3);
         sLL.insertInLinkedList(8, 4);
-        sLL.insertInLinkedList(9, 5);
+        sLL.insertInLinkedList(9, 0);
+        sLL.deletionOfNode(3);
         sLL.traverseSLL();
         //System.out.println(sLL.head.value);
+        sLL.searchNode(3);
 
 
     }

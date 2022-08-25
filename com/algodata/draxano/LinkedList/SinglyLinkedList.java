@@ -75,7 +75,7 @@ public class SinglyLinkedList {
     }
 
     // Searching in Singly Linked Lists
-    boolean searchNode(int nodeValue){
+    public boolean searchNode(int nodeValue){
         if(head != null){
             Node tempNode = head;
             for (int i = 0; i < size; i++){
@@ -88,6 +88,42 @@ public class SinglyLinkedList {
         }
         System.out.println("Node not found! ");
         return false;
+    }
+
+    // Deletion
+    public void deletionOfNode(int location){
+        if (head == null){
+            System.out.println("SSL doesn't exist");
+            return;
+        }else if (location == 0){
+            head = head.next;
+            size--;
+            if(size == 0){
+                tail = null;
+            }
+        }else if (location >= size){
+            Node tempNode = head;
+            for (int i = 0; i < size - 1; i++){
+                tempNode = tempNode.next;
+
+            }
+            if (tempNode == head) {
+                tail = head = null;
+                size--;
+                return;
+            }
+            tempNode.next = null;
+            tail = tempNode;
+            size--;
+        }
+        else {
+            Node tempNode = head;
+            for (int i = 0; i < location - 1; i++ ){
+                tempNode = tempNode.next;
+            }
+            tempNode.next = tempNode.next.next;
+            size--;
+        }
     }
 
 
