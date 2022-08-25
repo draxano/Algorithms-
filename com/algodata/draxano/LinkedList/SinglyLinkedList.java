@@ -126,6 +126,13 @@ public class SinglyLinkedList {
         }
     }
 
+    //Deletion of entire list
+    public void deleteSLL(){
+        head = null;
+        tail = null;
+        System.out.println("SLL deletion is successful");
+    }
+
 
 
 
