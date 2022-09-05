@@ -1,22 +1,18 @@
 package com.algodata.draxano;
 
+import com.algodata.draxano.LinkedList.CircularSinglyLinkedList;
 import com.algodata.draxano.LinkedList.SinglyLinkedList;
 
 public class main {
     public static void main(String args[]){
         // You can play around here with the sLL to get an intuition
 
-        SinglyLinkedList sLL = new SinglyLinkedList();
-        sLL.createSinglyLinkedList(5);
-        //System.out.println(sLL.head.value);
-        sLL.insertInLinkedList(6, 1);
-        sLL.insertInLinkedList(7, 3);
-        sLL.insertInLinkedList(8, 4);
-        sLL.insertInLinkedList(9, 0);
-        sLL.deletionOfNode(3);
-        sLL.traverseSLL();
-        //System.out.println(sLL.head.value);
-        sLL.searchNode(3);
+        CircularSinglyLinkedList cSLL = new CircularSinglyLinkedList();
+
+        cSLL.createCSLL(5);
+        System.out.println(cSLL.head.value);
+        System.out.println(cSLL.head.next.value);
+
 
 
     }
