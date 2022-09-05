@@ -10,8 +10,11 @@ public class main {
         CircularSinglyLinkedList cSLL = new CircularSinglyLinkedList();
 
         cSLL.createCSLL(5);
-        System.out.println(cSLL.head.value);
-        System.out.println(cSLL.head.next.value);
+        cSLL.insertCSLL(4,0);
+        cSLL.insertCSLL(6,1);
+        cSLL.insertCSLL(7,8);
+        cSLL.traversal();
+        cSLL.searchNode(8);
 
 
 
