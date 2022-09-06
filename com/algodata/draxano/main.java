@@ -14,7 +14,8 @@ public class main {
         cSLL.insertCSLL(6,1);
         cSLL.insertCSLL(7,8);
         cSLL.traversal();
-        cSLL.searchNode(8);
+        cSLL.deleteNode(0);
+        cSLL.traversal();
 
 
 
